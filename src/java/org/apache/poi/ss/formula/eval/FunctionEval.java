@@ -291,12 +291,7 @@ public final class FunctionEval {
         }
 
         int idx = metaData.getIndex();
-        if(functions[idx] instanceof NotImplementedFunction) {
-            functions[idx] = func;
-        } else {
-            throw new IllegalArgumentException("POI already implememts " + name +
-                    ". You cannot override POI's implementations of Excel functions");
-        }
+        functions[idx] = func;
     }
 
     /**
